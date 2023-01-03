@@ -2,25 +2,27 @@ use london_coffee_shops;
 
 CREATE TABLE branches (ID INT NOT NULL,
 branch_address VARCHAR(50) NOT NULL,
+lat FLOAT,
+lon FLOAT,
 PRIMARY KEY (ID)
 );
-INSERT INTO branches (ID, branch_address)
+INSERT INTO branches (ID, branch_address, lat, lon)
 VALUES
-(1, 'St Paul\'s'),
-(2, 'Trafalgar Sqr'),
-(3, 'Hyde Park'),
-(4, 'Marble Ark'),
-(5, 'Notting Hill'),
-(6, 'Regent\'s Park'),
-(7, 'King\'s College'),
-(8, 'Kensington'),
-(9, 'Natural History Museum'),
-(10, 'Earls Court'),
-(11, 'Waterloo'),
-(12, 'London Eye'),
-(13, 'British Museum'),
-(14, 'Soho'),
-(15, 'London Zoo');
+(1, 'St Paul\'s', 51.513870, -0.098362),
+(2, 'Trafalgar Sqr', 51.5048, -0.1235),
+(3, 'Hyde Park', 51.508610, -0.163611),
+(4, 'Marble Ark', 51.5078, -0.1553),
+(5, 'Notting Hill', 51.511029, -0.205389),
+(6, 'Regent\'s Park', 51.531143, -0.159893),
+(7, 'King\'s College', 51.511448, -0.116414),
+(8, 'Kensington', 51.50101, -0.193279),
+(9, 'Natural History Museum', 51.495915, -0.176366),
+(10, 'Earls Court', 51.490331, -0.195842),
+(11, 'Waterloo', 51.505028, -0.115013),
+(12, 'London Eye', 51.503399, -0.119519),
+(13, 'British Museum', 51.518757, -0.126168),
+(14, 'Soho', 51.513561, -0.137706),
+(15, 'London Zoo', 51.5347, -0.152203);
 
 CREATE TABLE coffee_menu (coffee_ID INT NOT NULL,
 coffee_name VARCHAR(50) NOT NULL UNIQUE,
